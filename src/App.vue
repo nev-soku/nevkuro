@@ -44,7 +44,6 @@ export default {
     };
   },
   async created() {
-    const spreadsheetId = '1gfigGaZxrdqiTk9oJriRDH4Q0ZxknzZunMGI4SH-EzU';
     const sheetName = '表示用';
     const range = 'B5:CR13'; // 読み込み範囲を設定
     const response = await fetch(
