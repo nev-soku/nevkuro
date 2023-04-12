@@ -100,7 +100,13 @@ export default {
 </script>
 
 <style>
-.highlight-name-column .v-data-table__wrapper tbody td:nth-child(2) {
-  background-color: yellow;
+.v-data-table td {
+    background: #f0f8ff;
+}
+.v-data-table tr:nth-child(odd) td {
+    background: #fff;
+}
+.v-data-table tr:hover td {
+    background-color: #eee;
 }
 </style>
