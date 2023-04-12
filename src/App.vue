@@ -31,6 +31,7 @@
 </template>
 <script>
 import { apiKey } from './key.js';
+import { spreadsheetId } from './key.js';
 export default {
   data() {
     return {
