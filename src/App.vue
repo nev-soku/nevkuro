@@ -1,3 +1,4 @@
+
 <template>
   <v-container>
     <v-app-bar app fixed dark>
@@ -5,37 +6,25 @@
       <v-spacer></v-spacer>
     </v-app-bar>
     <v-row>
-      <v-col>
-        <v-responsive>
-          <iframe width="100%" height="400" :src="iframeSrc" frameborder="0" allowfullscreen></iframe>
-        </v-responsive>
-      </v-col>
+    <v-col></v-col>
     </v-row>
     <v-row>
-      <v-col>
-        <div>本日は：{{ today }}</div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col>
-        <v-btn-group>
-          <v-btn v-for="month in months" :key="month" @click="selectMonth(month)">{{ month }}</v-btn>
-        </v-btn-group>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col>
-        <hr>
-      </v-col>
+    <v-col></v-col>
     </v-row>
     <v-row>
       <v-col v-if="rows.length">
+        <v-col>
+          <div>本日は：{{ today }}</div>
+        </v-col>
+        <v-btn v-for="month in months" :key="month" @click="selectMonth(month)">{{ month }}</v-btn>
+        <v-col><hr></v-col>
         <v-data-table
           :headers="filteredHeaders"
           :items="rows"
           :items-per-page="12"
           item-class="highlight-name-column"
         ></v-data-table>
+        <v-col></v-col>
       </v-col>
     </v-row>
   </v-container>
